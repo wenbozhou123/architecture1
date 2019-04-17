@@ -3,16 +3,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>architecture1</artifactId>
-        <groupId>com.bowen.architecture</groupId>
+        <groupId>com.bowen.architecture.architecture1</groupId>
+        <artifactId>parent</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>architecture1-customerMgr</artifactId>
+    <artifactId>customerMgr</artifactId>
     <packaging>war</packaging>
 
-    <name>architecture1-customerMgr Maven Webapp</name>
+    <name>acustomerMgr</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 

@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.bowen.architecture</groupId>
-    <artifactId>architecture1</artifactId>
+    <groupId>com.bowen.architecture.architecture1</groupId>
+    <artifactId>parent</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
@@ -14,8 +14,38 @@
         <module>goodsMgr</module>
         <module>goodsMgrWeb</module>
         <module>web</module>
-        <module>test-web</module>
     </modules>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.bowen.architecture.architecture1</groupId>
+                <artifactId>common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bowen.architecture.architecture1</groupId>
+                <artifactId>customerMgr</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bowen.architecture.architecture1</groupId>
+                <artifactId>goodmgr</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bowen.architecture.architecture1</groupId>
+                <artifactId>goodsMgrWeb</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bowen.architecture.architecture1</groupId>
+                <artifactId>web</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <pluginManagement>
