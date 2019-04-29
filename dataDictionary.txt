@@ -1,0 +1,12 @@
+客户管理：
+（uuid, customerId, pwd, showName, trueName, registerTime）
+商品管理：
+（uuid, name, imgPath, description）
+购物车
+（uuid, customerUuid, goodsUuid, buyNum）
+订单管理--主订单
+（uuid, customerId, orderTime, totalMoney, saveMoney, state）
+订单管理--子订单
+（uuid, orderUuid, goodsUuid, orderNum, price, money, saveMoney）
+库存管理：
+（uuid, goodsUuid, storeNum）
