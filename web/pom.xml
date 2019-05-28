@@ -14,13 +14,31 @@
     <dependencies>
         <dependency>
             <groupId>com.bowen.architecture.architecture1</groupId>
-            <artifactId>customermgr</artifactId>
+            <artifactId>customerMgr</artifactId>
             <version>${project.version}</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>com.bowen.architecture.architecture1</groupId>
             <artifactId>goodsMgrWeb</artifactId>
+            <version>${project.version}</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>com.bowen.architecture.architecture1</groupId>
+            <artifactId>cartMgr</artifactId>
+            <version>${project.version}</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>com.bowen.architecture.architecture1</groupId>
+            <artifactId>orderMgr</artifactId>
+            <version>${project.version}</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>com.bowen.architecture.architecture1</groupId>
+            <artifactId>storeMgr</artifactId>
             <version>${project.version}</version>
             <type>war</type>
         </dependency>
@@ -42,11 +60,23 @@
                     <overlays>
                         <overlay>
                             <groupId>com.bowen.architecture.architecture1</groupId>
-                            <artifactId>customermgr</artifactId>
+                            <artifactId>customerMgr</artifactId>
                         </overlay>
                         <overlay>
                             <groupId>com.bowen.architecture.architecture1</groupId>
                             <artifactId>goodsMgrWeb</artifactId>
+                        </overlay>
+                        <overlay>
+                            <groupId>com.bowen.architecture.architecture1</groupId>
+                            <artifactId>cartMgr</artifactId>
+                        </overlay>
+                        <overlay>
+                            <groupId>com.bowen.architecture.architecture1</groupId>
+                            <artifactId>orderMgr</artifactId>
+                        </overlay>
+                        <overlay>
+                            <groupId>com.bowen.architecture.architecture1</groupId>
+                            <artifactId>storeMgr</artifactId>
                         </overlay>
                     </overlays>
                 </configuration>
