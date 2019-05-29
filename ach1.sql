@@ -41,6 +41,26 @@ customerUuid int,
 goodsTime varchar(100),
 totalMoney float,
 saveMoney float,
-state smallint
+state smallint,
+primary key (uuid)
+) charset=utf8 ENGINE=InnoDB;
+
+drop table if exists tb1_orderDetail;
+create table tb1_orderDetail(
+uuid int not null auto_increment,
+orderUuid int,
+goodsUuid int,
+orderNum int,
+price float,
+money float,
+saveMoney float,
+primary key (uuid)
+) charset=utf8 ENGINE=InnoDB;
+
+drop table if exists tb1_store;
+create table tb1_store(
+uuid int not null auto_increment,
+goodsUuid int,
+storeNum int,
 primary key (uuid)
 ) charset=utf8 ENGINE=InnoDB;
