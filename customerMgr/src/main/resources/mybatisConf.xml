@@ -5,8 +5,11 @@
         <typeAlias type="com.bowen.architecture.architecture1.customerMgr.vo.CustomerModel" alias="CM"/>
         <typeAlias type="com.bowen.architecture.architecture1.customerMgr.vo.CustomerQueryModel" alias="CQM"/>
     </typeAliases>
-<!--    <plugins>
-        <plugin interceptor="com.bowen"></plugin>
-    </plugins>-->
+    <plugins>
+        <plugin interceptor="com.bowen.architecture.architecture1.pageutil.pagePlugin">
+            <property name="dialect" value="mysql"/>
+            <property name="pageSqlId" value=".*Page.*"/>
+        </plugin>
+    </plugins>
 
 </configuration>

@@ -1,8 +1,10 @@
 package com.bowen.architecture.architecture1.customerMgr.vo;
 
+import com.bowen.architecture.architecture1.common.vo.BaseModel;
+
 import java.util.Objects;
 
-public class CustomerModel {
+public class CustomerModel extends BaseModel{
     private Integer uuid;
     private String customerId;
     private String pwd;

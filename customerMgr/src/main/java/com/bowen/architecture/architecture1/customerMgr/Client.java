@@ -25,9 +25,14 @@ public class Client {
         cm.setRegisterTime("111");
         cm.setShowName("c1");
         cm.setTrueName("张三");
-        c.dao.create(cm);
+        //c.dao.create(cm);
 
-        List<CustomerModel> list = c.dao.getByCondition(new CustomerQueryModel());
+        CustomerQueryModel cqm = new CustomerQueryModel();
+
+        cqm.getPage().setNowPage(5);
+
+
+        List<CustomerModel> list = c.dao.getByConditionPage(cqm);
 
         System.out.println("list==" +list);
 

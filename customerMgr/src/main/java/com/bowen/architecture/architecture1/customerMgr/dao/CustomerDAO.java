@@ -14,6 +14,6 @@ public interface CustomerDAO {
     public void delete(int uuid);
 
     public CustomerModel getByUuid(int uuid);
-    public List<CustomerModel> getByCondition(CustomerQueryModel cqm);
+    public List<CustomerModel> getByConditionPage(CustomerQueryModel cqm);
 
 }
