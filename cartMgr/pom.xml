@@ -12,6 +12,13 @@
     <artifactId>cartMgr</artifactId>
     <packaging>war</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.bowen.architecture.architecture1</groupId>
+            <artifactId>common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 
 
     <build>

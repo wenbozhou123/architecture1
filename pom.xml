@@ -23,35 +23,8 @@
         <spring.version>5.1.5.RELEASE</spring.version>
     </properties>
 
-
-    <dependencyManagement>
         <dependencies>
             <!--自身依赖-->
-            <dependency>
-                <groupId>com.bowen.architecture.architecture1</groupId>
-                <artifactId>common</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.bowen.architecture.architecture1</groupId>
-                <artifactId>customerMgr</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.bowen.architecture.architecture1</groupId>
-                <artifactId>goodsMgr</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.bowen.architecture.architecture1</groupId>
-                <artifactId>goodsMgrWeb</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.bowen.architecture.architecture1</groupId>
-                <artifactId>web</artifactId>
-                <version>${project.version}</version>
-            </dependency>
 
             <dependency>
                 <groupId>junit</groupId>
@@ -59,7 +32,6 @@
                 <version>4.12</version>
                 <scope>test</scope>
             </dependency>
-
 
             <!--cglib的jar包 for 动态生成，动态代理-->
             <dependency>
@@ -131,22 +103,22 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-core</artifactId>
                 <version>${spring.version}</version>
-            </dependency>
-            <dependency>
+            </dependency>-->
+<!--            <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-beans</artifactId>
                 <version>${spring.version}</version>
-            </dependency>
-            <dependency>
+            </dependency>-->
+<!--            <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-web</artifactId>
                 <version>${spring.version}</version>
             </dependency>-->
-            <dependency>
+<!--            <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-jdbc</artifactId>
                 <version>${spring.version}</version>
-            </dependency>
+            </dependency>-->
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-orm</artifactId>
@@ -190,11 +162,23 @@
                 <version>1.2</version>
             </dependency>
 
-
+            <!--log相关-->
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>1.2</version>
+            </dependency>
         </dependencies>
-    </dependencyManagement>
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
         <pluginManagement>
             <plugins>
                 <plugin>

@@ -31,6 +31,13 @@
 
     <name>storeMgr</name>
     <artifactId>storeMgr</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.bowen.architecture.architecture1</groupId>
+            <artifactId>common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <finalName>storeMgr</finalName>

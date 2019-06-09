@@ -11,5 +11,12 @@
 
     <artifactId>goodsMgr</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.bowen.architecture.architecture1</groupId>
+            <artifactId>common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>

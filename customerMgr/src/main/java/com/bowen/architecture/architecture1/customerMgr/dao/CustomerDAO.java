@@ -2,9 +2,11 @@ package com.bowen.architecture.architecture1.customerMgr.dao;
 
 import com.bowen.architecture.architecture1.customerMgr.vo.CustomerModel;
 import com.bowen.architecture.architecture1.customerMgr.vo.CustomerQueryModel;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface CustomerDAO {
 
     public void create(CustomerModel cm);

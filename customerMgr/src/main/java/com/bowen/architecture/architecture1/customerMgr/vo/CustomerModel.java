@@ -19,6 +19,18 @@ public class CustomerModel {
     }
 
     @Override
+    public String toString() {
+        return "CustomerModel{" +
+                "uuid=" + uuid +
+                ", customerId='" + customerId + '\'' +
+                ", pwd='" + pwd + '\'' +
+                ", showName='" + showName + '\'' +
+                ", trueName='" + trueName + '\'' +
+                ", registerTime='" + registerTime + '\'' +
+                '}';
+    }
+
+    @Override
     public int hashCode() {
 
         return Objects.hash(getUuid());
