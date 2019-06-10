@@ -2,7 +2,6 @@ package com.bowen.architecture.architecture1.common.vo;
 
 import com.bowen.architecture.architecture1.pageutil.Page;
 
-import java.util.Objects;
 
 public class BaseModel implements java.io.Serializable{
     private Integer uuid;
@@ -23,6 +22,7 @@ public class BaseModel implements java.io.Serializable{
     public void setPage(Page page) {
         this.page = page;
     }
+
 
     @Override
     public boolean equals(Object obj) {
