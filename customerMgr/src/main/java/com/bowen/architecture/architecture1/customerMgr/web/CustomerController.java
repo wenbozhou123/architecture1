@@ -32,7 +32,8 @@ public class CustomerController {
 
     @RequestMapping(value = "toUpdate/{customerUuid}", method = RequestMethod.GET)
     public String toUpdate(Model model, @PathVariable("customerUuid") int customerUuid) {
-        CustomerModel cm = customerService.getByUuid(customerUuid);
+        Object o = customerService.getByUuid(customerUuid);
+        CustomerModel cm = null;
         model.addAttribute("cm", cm);
         return "customer/update";
     }
@@ -57,17 +58,20 @@ public class CustomerController {
     }
 
     @RequestMapping(value = "toList", method = RequestMethod.GET)
-    public String toList(@RequestParam("queryJsonStr") String queryJsonStr, @ModelAttribute("page") Page page, Model model) {
+    public String toList(@ModelAttribute("wm") CustomerWebModel wm, Model model) {
         CustomerQueryModel cqm = null;
-        if(queryJsonStr == null || queryJsonStr.trim().length() == 0){
+        if(wm.getQueryJsonStr() == null || wm.getQueryJsonStr().length() == 0){
             cqm = new CustomerQueryModel();
         }else{
-            cqm = (CustomerQueryModel) JsonHelper.str2Object(queryJsonStr,CustomerQueryModel.class);
+            cqm = (CustomerQueryModel) JsonHelper.str2Object(wm.getQueryJsonStr(),CustomerQueryModel.class);
         }
-        cqm.getPage().setNowPage(page.getNowPage());
+        cqm.getPage().setNowPage(wm.getNowPage());
+        if(wm.getPageShow() >0)
+            cqm.getPage().setPageShow(wm.getPageShow());
+
         Page dbpage = customerService.getByConditionPage(cqm);
 
-        model.addAttribute("queryJsonStr", queryJsonStr);
+        model.addAttribute("wm", wm);
         model.addAttribute("page", dbpage);
 
         return "customer/list";
