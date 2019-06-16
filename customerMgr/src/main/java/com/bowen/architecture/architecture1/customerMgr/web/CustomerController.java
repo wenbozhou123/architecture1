@@ -32,15 +32,14 @@ public class CustomerController {
 
     @RequestMapping(value = "toUpdate/{customerUuid}", method = RequestMethod.GET)
     public String toUpdate(Model model, @PathVariable("customerUuid") int customerUuid) {
-        Object o = customerService.getByUuid(customerUuid);
-        CustomerModel cm = null;
+        CustomerModel cm= customerService.getByUuid(customerUuid);
         model.addAttribute("cm", cm);
         return "customer/update";
     }
 
     @RequestMapping(value = "update", method = RequestMethod.POST)
     public String update(@ModelAttribute("cm") CustomerModel cm){
-        customerService.create(cm);
+        customerService.update(cm);
         return "customer/success";
     }
 
@@ -75,6 +74,18 @@ public class CustomerController {
         model.addAttribute("page", dbpage);
 
         return "customer/list";
+    }
+
+    @RequestMapping(value = "toQuery", method = RequestMethod.GET)
+    public String toQuery() {
+        return "customer/query";
+    }
+
+    @RequestMapping(value = "query", method = RequestMethod.POST)
+    public String query(@ModelAttribute("qm") CustomerQueryModel qm) {
+
+
+        return "customer/query";
     }
 
 }
