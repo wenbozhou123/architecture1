@@ -20,7 +20,7 @@ drop table if exists tb1_goods;
 create table tb1_goods(
 uuid int not null auto_increment,
 name varchar(200),
-imgaePath varchar(500),
+imagePath varchar(500),
 description varchar(2000),
 primary key (uuid)
 ) charset=utf8 ENGINE=InnoDB;

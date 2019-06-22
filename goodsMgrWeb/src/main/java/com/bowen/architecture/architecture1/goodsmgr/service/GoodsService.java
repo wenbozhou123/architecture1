@@ -11,7 +11,7 @@ import com.bowen.architecture.architecture1.goodsmgr.dao.GoodsDAO;
 import com.bowen.architecture.architecture1.goodsmgr.vo.GoodsModel;
 import com.bowen.architecture.architecture1.goodsmgr.vo.GoodsQueryModel;
 
-@Service("GoodsService")
+@Service("goodsService")
 @Transactional
 public class GoodsService extends BaseService<GoodsModel,GoodsQueryModel> implements IGoodsService{
 	private GoodsDAO dao = null;

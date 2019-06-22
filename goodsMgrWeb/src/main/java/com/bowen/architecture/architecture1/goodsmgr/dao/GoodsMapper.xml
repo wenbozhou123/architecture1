@@ -3,22 +3,22 @@
   
 <mapper namespace="com.bowen.architecture.architecture1.goodsmgr.dao.GoodsDAO">  
      <insert id="create" parameterType="GM">
-     	insert into tbl_goods (name,imagePath,description) 
+     	insert into tb1_goods (name,imagePath,description)
      	 values(#{name},#{imagePath},#{description})
      </insert>
      <update id="update" parameterType="GM">
-     	update tbl_goods set name=#{name},imagePath=#{imagePath},description=#{description}
+     	update tb1_goods set name=#{name},imagePath=#{imagePath},description=#{description}
      	   	where uuid=#{uuid}
      </update>
      <delete id="delete" parameterType="int">
-     	delete from tbl_goods where uuid=#{uuid}
+     	delete from tb1_goods where uuid=#{uuid}
      </delete>
      
     <select id="getByUuid" parameterType="int" resultType="GM">  
-        select * from tbl_goods where uuid=#{uuid}
+        select * from tb1_goods where uuid=#{uuid}
     </select>  
     <select id="getByConditionPage" parameterType="GQM" resultType="GM">  
-        select * from tbl_goods
+        select * from tb1_goods
         <where>
         	<if test="uuid!=null &amp;&amp; uuid > 0">
         		and uuid=#{uuid}
