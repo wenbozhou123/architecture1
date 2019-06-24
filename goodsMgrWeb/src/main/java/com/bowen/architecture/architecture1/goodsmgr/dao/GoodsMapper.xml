@@ -22,8 +22,10 @@
         <where>
         	<if test="uuid!=null &amp;&amp; uuid > 0">
         		and uuid=#{uuid}
-        	</if>  
-        	
+        	</if>
+            <if test="name!=null &amp;&amp; name!=''">
+                and name like #{name}
+            </if>
         </where>
     </select> 
 </mapper>

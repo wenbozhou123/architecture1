@@ -12,7 +12,7 @@
 <script type="text/javascript">
 	$().ready(function(){
 		$("#btn_query").click(function(){
-			var json ='{"name":"'+$("#name").val()+'","imagePath":"'+$("#imagePath").val()+'","description":"'+$("#description").val()+'"}';
+			var json ='{"name":"-'+$("#name").val()+'-","imagePath":"'+$("#imagePath").val()+'","description":"'+$("#description").val()+'"}';
 			window.location.href = "${pageContext.request.contextPath}/goods/toList?queryJsonStr="+json;
 		});		
 	});
