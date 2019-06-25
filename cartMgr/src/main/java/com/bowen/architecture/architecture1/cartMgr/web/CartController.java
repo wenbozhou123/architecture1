@@ -27,7 +27,8 @@ public class CartController {
 		
 		return "cart/add";
 	}
-	@RequestMapping(value="add",method=RequestMethod.POST)
+
+	@RequestMapping(value = "add", method = RequestMethod.POST)
 	public String add(@ModelAttribute("m") CartModel m){
 		cartService.create(m);
 		return "cart/success";
@@ -39,7 +40,7 @@ public class CartController {
 		return "cart/update";
 	}
 	@RequestMapping(value="update",method=RequestMethod.POST)
-	public String post(@ModelAttribute("m") CartModel m){
+	public String update(@ModelAttribute("m") CartModel m){
 		cartService.update(m);
 		return "cart/success";
 	}
@@ -50,7 +51,7 @@ public class CartController {
 		return "cart/delete";
 	}
 	@RequestMapping(value="delete",method=RequestMethod.POST)
-	public String post(@RequestParam("uuid") int uuid){
+	public String delete(@RequestParam("uuid") int uuid){
 		cartService.delete(uuid);
 		return "cart/success";
 	}
