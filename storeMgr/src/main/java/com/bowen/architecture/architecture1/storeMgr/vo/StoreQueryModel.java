@@ -1,4 +1,4 @@
-package com.bowen.architecture.architecture1.storemgr.vo;
+package com.bowen.architecture.architecture1.storeMgr.vo;
 
 public class StoreQueryModel extends StoreModel {
 	

@@ -1,10 +1,10 @@
-package com.bowen.architecture.architecture1.storemgr.service;
+package com.bowen.architecture.architecture1.storeMgr.service;
 
 
 import com.bowen.architecture.architecture1.common.service.IBaseService;
 
-import com.bowen.architecture.architecture1.storemgr.vo.StoreModel;
-import com.bowen.architecture.architecture1.storemgr.vo.StoreQueryModel;
+import com.bowen.architecture.architecture1.storeMgr.vo.StoreModel;
+import com.bowen.architecture.architecture1.storeMgr.vo.StoreQueryModel;
 
 public interface IStoreService extends IBaseService<StoreModel,StoreQueryModel>{
 	

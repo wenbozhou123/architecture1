@@ -1,4 +1,4 @@
-package com.bowen.architecture.architecture1.storemgr.vo;
+package com.bowen.architecture.architecture1.storeMgr.vo;
 
 import com.bowen.architecture.architecture1.common.vo.BaseModel;
 

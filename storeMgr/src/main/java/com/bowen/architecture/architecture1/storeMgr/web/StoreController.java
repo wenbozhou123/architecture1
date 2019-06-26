@@ -1,4 +1,4 @@
-package com.bowen.architecture.architecture1.storemgr.web;
+package com.bowen.architecture.architecture1.storeMgr.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.bowen.architecture.architecture1.storemgr.service.IStoreService;
-import com.bowen.architecture.architecture1.storemgr.vo.StoreModel;
-import com.bowen.architecture.architecture1.storemgr.vo.StoreQueryModel;
+import com.bowen.architecture.architecture1.storeMgr.service.IStoreService;
+import com.bowen.architecture.architecture1.storeMgr.vo.StoreModel;
+import com.bowen.architecture.architecture1.storeMgr.vo.StoreQueryModel;
 import com.bowen.architecture.architecture1.pageutil.Page;
 import com.bowen.architecture.architecture1.util.format.DateFormatHelper;
 import com.bowen.architecture.architecture1.util.json.JsonHelper;
@@ -20,7 +20,7 @@ import com.bowen.architecture.architecture1.util.json.JsonHelper;
 @RequestMapping(value="/store")
 public class StoreController {
 	@Autowired
-	private IStoreService StoreService = null;
+	private IStoreService storeService = null;
 	
 	@RequestMapping(value="toAdd",method=RequestMethod.GET)
 	public String toAdd(){
@@ -29,29 +29,29 @@ public class StoreController {
 	}
 	@RequestMapping(value="add",method=RequestMethod.POST)
 	public String add(@ModelAttribute("m") StoreModel m){
-		iservice.create(m);
+		storeService.create(m);
 		return "store/success";
 	}
 	@RequestMapping(value="toUpdate/{uuid}",method=RequestMethod.GET)
 	public String toUpdate(Model model,@PathVariable("uuid") int uuid){
-		StoreModel m = iservice.getByUuid(uuid);
+		StoreModel m = storeService.getByUuid(uuid);
 		model.addAttribute("m", m);
 		return "store/update";
 	}
 	@RequestMapping(value="update",method=RequestMethod.POST)
 	public String post(@ModelAttribute("m") StoreModel m){
-		iservice.update(m);
+		storeService.update(m);
 		return "store/success";
 	}
 	@RequestMapping(value="toDelete/{uuid}",method=RequestMethod.GET)
 	public String toDelete(Model model,@PathVariable("uuid") int uuid){
-		StoreModel m = iservice.getByUuid(uuid);
+		StoreModel m = storeService.getByUuid(uuid);
 		model.addAttribute("m", m);
 		return "store/delete";
 	}
 	@RequestMapping(value="delete",method=RequestMethod.POST)
 	public String post(@RequestParam("uuid") int uuid){
-		iservice.delete(uuid);
+		storeService.delete(uuid);
 		return "store/success";
 	}
 	@RequestMapping(value="toList",method=RequestMethod.GET)
@@ -70,7 +70,7 @@ public class StoreController {
 			qm.getPage().setPageShow(wm.getPageShow());
 		}
 		
-		Page dbPage = iservice.getByConditionPage(qm);
+		Page dbPage = storeService.getByConditionPage(qm);
 		
 		//
 		model.addAttribute("wm", wm);

@@ -2,8 +2,8 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <typeAlias type="com.bowen.architecture.architecture1.cartMgr.vo.CartModel" alias="CartM"/>
-        <typeAlias type="com.bowen.architecture.architecture1.cartMgr.vo.CartQueryModel" alias="CartQM"/>
+        <typeAlias type="com.bowen.architecture.architecture1.storeMgr.vo.StoreModel" alias="StoreM"/>
+        <typeAlias type="com.bowen.architecture.architecture1.storeMgr.vo.StoreQueryModel" alias="StoreQM"/>
     </typeAliases>
     <plugins>
         <plugin interceptor="com.bowen.architecture.architecture1.pageutil.pagePlugin">
