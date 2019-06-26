@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-public class Page<E> {
+public class Page<E> implements java.io.Serializable{
     private int pageShow = 2;
     private int totalPage;
     private int totalCount;

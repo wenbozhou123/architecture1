@@ -43,7 +43,11 @@ public class Client {
 
         Page<CustomerModel> p = c.getS().getByConditionPage(cqm);
 
-        System.out.println("list==" +p);
+        System.out.println("list111==" +p);
+
+        /*Page<CustomerModel> p2 = c.getS().getByConditionPage(cqm);
+
+        System.out.println("list2222==" +p2);*/
 
     }
 

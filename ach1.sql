@@ -38,7 +38,7 @@ drop table if exists tb1_order;
 create table tb1_order(
 uuid int not null auto_increment,
 customerUuid int,
-goodsTime varchar(100),
+orderTime varchar(100),
 totalMoney float,
 saveMoney float,
 state smallint,
