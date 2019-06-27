@@ -37,6 +37,6 @@ public class LoginController {
 
         Cookie c =new Cookie("myLogin", customerModel.getUuid()+","+System.currentTimeMillis());
         response.addCookie(c);
-        return "index";
+        return "redirect:/index/toIndex";
     }
 }

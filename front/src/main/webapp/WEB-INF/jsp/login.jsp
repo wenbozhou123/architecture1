@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<form action="${pageContext.request.contextPath}/login" method="post">
+<form action="${pageContext.request.contextPath}/front/login" method="post">
     <table width="100%">
         <tr height="200">
             <td colspan="2">&nbsp;</td>

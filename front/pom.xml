@@ -31,26 +31,36 @@
             <groupId>com.bowen.architecture.architecture1</groupId>
             <artifactId>goodsMgrWeb</artifactId>
             <version>${project.version}</version>
+            <type>jar</type>
+            <classifier>api</classifier>
         </dependency>
         <dependency>
             <groupId>com.bowen.architecture.architecture1</groupId>
             <artifactId>cartMgr</artifactId>
             <version>${project.version}</version>
+            <type>jar</type>
+            <classifier>api</classifier>
         </dependency>
         <dependency>
             <groupId>com.bowen.architecture.architecture1</groupId>
             <artifactId>orderMgr</artifactId>
             <version>${project.version}</version>
+            <type>jar</type>
+            <classifier>api</classifier>
         </dependency>
         <dependency>
             <groupId>com.bowen.architecture.architecture1</groupId>
             <artifactId>storeMgr</artifactId>
             <version>${project.version}</version>
+            <type>jar</type>
+            <classifier>api</classifier>
         </dependency>
         <dependency>
             <groupId>com.bowen.architecture.architecture1</groupId>
             <artifactId>customerMgr</artifactId>
             <version>${project.version}</version>
+            <type>jar</type>
+            <classifier>api</classifier>
         </dependency>
     </dependencies>
     <build>
