@@ -35,4 +35,8 @@
         </where>
     </select>
 
+    <select id="getByCustomerId" parameterType="String" resultType="CM">
+        select * from tb1_customer where customerId=#{customerId}
+    </select>
+
 </mapper>

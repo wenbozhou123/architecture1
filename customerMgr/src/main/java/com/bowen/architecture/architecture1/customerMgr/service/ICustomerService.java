@@ -5,5 +5,5 @@ import com.bowen.architecture.architecture1.customerMgr.vo.CustomerModel;
 import com.bowen.architecture.architecture1.customerMgr.vo.CustomerQueryModel;
 
 public interface ICustomerService extends IBaseService<CustomerModel, CustomerQueryModel>{
-
+    public CustomerModel getByCustomerId(String customerId);
 }
