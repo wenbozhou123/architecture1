@@ -20,5 +20,9 @@ public class StoreService extends BaseService<StoreModel,StoreQueryModel> implem
 		this.dao = dao;
 		super.setDao(dao);
 	}
-	
+
+	@Override
+	public StoreModel getByGoodsUuid(int goodsUuid) {
+		return dao.getByGoodsUuid(goodsUuid);
+	}
 }

@@ -8,5 +8,5 @@ import com.bowen.architecture.architecture1.storeMgr.vo.StoreQueryModel;
 
 @Repository
 public interface StoreDAO extends BaseDAO<StoreModel,StoreQueryModel>{
-	
+	public StoreModel getByGoodsUuid(int goodsUuid);
 }

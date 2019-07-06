@@ -7,6 +7,6 @@ import com.bowen.architecture.architecture1.storeMgr.vo.StoreModel;
 import com.bowen.architecture.architecture1.storeMgr.vo.StoreQueryModel;
 
 public interface IStoreService extends IBaseService<StoreModel,StoreQueryModel>{
-	
+    public StoreModel getByGoodsUuid(int goodsUuid);
 }
 

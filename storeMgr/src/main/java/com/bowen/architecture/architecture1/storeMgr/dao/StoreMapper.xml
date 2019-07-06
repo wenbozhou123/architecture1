@@ -25,5 +25,9 @@
         	</if>  
         	
         </where>
-    </select> 
+    </select>
+
+    <select id="getByGoodsUuid" parameterType="StoreQM" resultType="StoreM">
+        select * from tb1_store where goodsUuid=#{goodsUuid}
+    </select>
 </mapper>
