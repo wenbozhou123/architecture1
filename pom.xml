@@ -13,11 +13,11 @@
         <module>customerMgr</module>
         <module>goodsMgr</module>
         <module>goodsMgrWeb</module>
-        <module>web</module>
         <module>cartMgr</module>
         <module>orderMgr</module>
         <module>storeMgr</module>
         <module>front</module>
+        <module>web</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -40,6 +40,8 @@
                 <artifactId>cglib</artifactId>
                 <version>3.2.5</version>
             </dependency>
+
+            <!--部署linux时候，需要注释掉这个依赖，因为后面有更高的版本-->
             <dependency>
                 <groupId>org.ow2.asm</groupId>
                 <artifactId>asm</artifactId>
