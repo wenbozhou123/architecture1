@@ -10,7 +10,7 @@
 
 <table width="70%" align="center">
     <tr>
-        <td colspan=4><a href="${pageContext.request.contextPath}/toCart">查看购物车</a></td>
+        <td colspan=4><a href="${pageContext.request.contextPath}/index/toCart">查看购物车</a></td>
     </tr>
     <c:set var="num" value="0"></c:set>
     <c:forEach var="m" items="${page.result}">
@@ -18,7 +18,7 @@
             <tr>
         </c:if>
         <td>
-            <a href="${pageContext.request.contextPath}/toGoodsDesc/${m.uuid}">
+            <a href="${pageContext.request.contextPath}/index/toGoodsDesc/${m.uuid}">
                 <table>
                     <tr>
                         <td><img alt="" src="${pageContext.request.contextPath}/static/images/logo.gif"/></td>

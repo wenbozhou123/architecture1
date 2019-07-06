@@ -35,7 +35,8 @@ public class LoginController {
             return "login";
         }
 
-        Cookie c =new Cookie("myLogin", customerModel.getUuid()+","+System.currentTimeMillis());
+        Cookie c =new Cookie("MyLogin", customerModel.getUuid()+","+System.currentTimeMillis());
+        c.setPath("/front");
         response.addCookie(c);
         return "redirect:/index/toIndex";
     }
