@@ -43,7 +43,7 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
         <property name="configLocation" value="classpath:mybatisConf.xml" />
-        <property name="mapperLocations" value="classpath*:com/bowen/**/*Mapper.xml" />
+        <property name="mapperLocations" value="classpath*:sqlmappers/*Mapper.xml" />
     </bean>
     <!--com.bowen包下， 并且被@Repository注解了接口，将全部被扫描，生成默认的实现类-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
